@@ -1,0 +1,2 @@
+# Flicksy2 - Addons
+This is a project to enable Flicksy 2 to have sound and music. It also adds cursor different look if you hover over interactive object or not. It also add a basic sound effect for letters showing one by one.

@@ -336,6 +336,7 @@ class DialoguePlayer {
             if (this.currentPage)
                 this.currentPage.forEach((glyph) => glyph.hidden = false);
         }
+        playSound(62067504);
     }
 
     moveToNextPage() {
