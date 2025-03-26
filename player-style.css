@@ -1,0 +1,31 @@
+html, body {
+    width: 100vw; height: 100vh;
+    margin: 0; padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+#content {
+    position: relative; overflow: hidden; /* clip things */
+    flex: 1;
+    background: black;
+}
+
+.scene {
+    position: absolute; transform-origin: 0 0;
+    width: 160px; height: 100px;
+    outline: 0px dotted rgb(255 255 255 / 5%);
+}
+
+.double-resolution .scene {
+    width: 320px; height: 200px;
+}
+
+.player-canvas {
+    cursor: none;
+    width: 640px; height: 400px;
+    outline: 1px solid #222222;
+}
