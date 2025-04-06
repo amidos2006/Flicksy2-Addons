@@ -108,7 +108,7 @@ class FlicksyPlayer {
 
         let cursorId = this.projectManager.projectData.state.cursor;
         if (this.mouse && cursorId && !this.dialoguePlayer.active && !this.state.locked) {
-            if(this.isInteractableHovered(this.mouse.x, this.mouse.y)) {
+            if(this.isInteractableHovered(this.mouse.x, this.mouse.y) && this.projectManager.projectData.state.cursor_highlight !== undefined){
                 cursorId = this.projectManager.projectData.state.cursor_highlight;
             }
             const drawing = getDrawingById(this.projectManager.projectData, cursorId);
