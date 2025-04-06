@@ -55,3 +55,6 @@ if(COMMANDS.STOP){
 ```
 
 The problem is if you use these commands in the editors, you can't do testing online without running the edits. A hack around that is to check if the function exists before using it. That is why all the examples above checks `COMMANDS` if it contains the function before trying to play it. This if condition is only useful for the online editor.
+
+## Games that use Adds
+- [Queen Boat](https://amidos2006.itch.io/queen-boat) by [Ahmed Khalifa](https://amidos2006.itch.io/).
