@@ -8,6 +8,7 @@ argparser.add_argument('input', type=str, help='Input HTML file')
 argparser.add_argument('-o', '--output', type=str, help='Output HTML file', default='index.html')
 argparser.add_argument('-c', '--cursor', type=str, help='Cursor highlight name', default='default cursor highlight')
 argparser.add_argument('-m', '--music', type=str, help='Music file name', default='music.mp3')
+argparser.add_argument('-s', '--show', action='store_true', help='show cursor if mobile')
 
 args = argparser.parse_args()
 
@@ -48,6 +49,7 @@ for img in projectdata_object["drawings"]:
     if img["name"] == args.cursor:
         projectdata_object["state"]["cursor_highlight"] = img["id"]
         break
+projectdata_object["state"]["mobile_hide_cursor"] = not args.show
 projectdata.clear()
 projectdata.append(json.dumps(projectdata_object))
 

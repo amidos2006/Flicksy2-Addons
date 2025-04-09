@@ -29,6 +29,15 @@ class FlicksyPlayer {
         return this.projectManager.projectData.state;
     }
 
+    get isMobile(){
+        let isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        if(!isMobile){
+            const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+            isMobile = regex.test(navigator.userAgent);
+        }
+        return isMobile;
+    }
+
     async load() {
         await this.dialoguePlayer.load();
     }
@@ -107,7 +116,7 @@ class FlicksyPlayer {
         }
 
         let cursorId = this.projectManager.projectData.state.cursor;
-        if (this.mouse && cursorId && !this.dialoguePlayer.active && !this.state.locked) {
+        if (this.mouse && cursorId && !this.dialoguePlayer.active && !this.state.locked && !(this.projectManager.projectData.state.mobile_hide_cursor && this.isMobile)) {
             if(this.isInteractableHovered(this.mouse.x, this.mouse.y) && this.projectManager.projectData.state.cursor_highlight !== undefined){
                 cursorId = this.projectManager.projectData.state.cursor_highlight;
             }
