@@ -30,6 +30,10 @@ where `"new highlighed cursor"` is the name of the cursor in the flicksy 2 engin
 python run.py input.html -m crazy_music.mp3
 ```
 where `crazy_music.mp3` is the name of the music file beside the project.
+- `--show`: This show the mouse cursor if you are using mobile phone as the default is to hide the cursor. This is a flag argument so no parameters are needed.
+```bash
+python run.py input.html --show
+```
 
 You can combine any of these parameters together to get fun effects.
 

@@ -8,7 +8,7 @@ argparser.add_argument('input', type=str, help='Input HTML file')
 argparser.add_argument('-o', '--output', type=str, help='Output HTML file', default='index.html')
 argparser.add_argument('-c', '--cursor', type=str, help='Cursor highlight name', default='default cursor highlight')
 argparser.add_argument('-m', '--music', type=str, help='Music file name', default='music.mp3')
-argparser.add_argument('-s', '--show', action='store_true', help='show cursor if mobile')
+argparser.add_argument('--show', action='store_true', help='show cursor if mobile')
 
 args = argparser.parse_args()
 
