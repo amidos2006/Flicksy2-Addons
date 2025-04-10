@@ -30,12 +30,8 @@ class FlicksyPlayer {
     }
 
     get isMobile(){
-        let isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-        if(!isMobile){
-            const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-            isMobile = regex.test(navigator.userAgent);
-        }
-        return isMobile;
+        const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+        return regex.test(navigator.userAgent);
     }
 
     async load() {
